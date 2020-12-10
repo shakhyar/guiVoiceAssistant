@@ -1,0 +1,437 @@
+<News>:
+	number: number
+	
+	Label:
+		text: "How many headlines do you want?"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+
+	TextInput:
+		id: number
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+
+	Button:
+		text: "Get News"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.get_news()	
+
+<Article>:
+	querry: querry
+
+	Label:
+		text: "Type the name of the topic below"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+
+	TextInput:
+		id: querry
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+
+	Button:
+		text: "search"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.search()
+
+<Math_main>:
+	Label:
+		text: "What math do you want to perform?"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	Button:
+		text: "Square root(x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.7}
+		on_release: root.takesqrt()
+
+	Button:
+		text: "Power(x, y)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.7}
+		on_release: root.takepow()
+
+	Button:
+		text: "sin (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.7}
+		on_release: root.takesin()
+
+
+
+	Button:
+		text: "cos (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.6}
+		on_release: root.takecos()
+
+	Button:
+		text: "tan (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.6}
+		on_release: root.taketan()
+
+	Button:
+		text: "tanh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.6}
+		on_release: root.taketanh()
+
+
+	Button:
+		text: "sinh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.5}
+		on_release: root.takesinh()
+
+	Button:
+		text: "cosh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.5}
+		on_release: root.takecosh()
+
+	Button:
+		text: "radians (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.5}
+		on_release: root.takeradian()
+
+	Button:
+		text: "degrees (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.4}
+		on_release: root.takedegrees()
+
+	Button:
+		text: "acos (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.4}
+		on_release: root.takeacos()
+
+	Button:
+		text: "acosh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.4}
+		on_release: root.takeacosh()
+
+	Button:
+		text: "asin (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.3}
+
+	Button:
+		text: "asinh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.3}
+
+	Button:
+		text: "atan (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.3}
+
+	Button:
+		text: "atanh (x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.2}
+
+	Button:
+		text: "atan2(x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.7, "y": 0.2}
+
+	Button:
+		text: "factorial(x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.35, "y": 0.2}
+
+	Button:
+		text: "gamma(x)"
+		size_hint: 0.3, 0.1
+		pos_hint: {"x":0.002, "y": 0.2}
+
+	Label:
+		text: "=======formulae added by Shakhyar======="
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.001}
+
+
+
+<SquareRoot>:
+	square_number: square_number
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: square_number
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_sqrt()			
+
+
+<ChatPage>:
+	main_input: main_input
+	Image:
+    	source: "giphy.gif"
+    	size: self.texture_size
+
+
+
+
+
+	Button:
+		size_hint: 0.2, 0.1
+		pos_hint:{"x": 0.8, "y": 0.0}
+		background_color: (0,0.3,0.5,1)
+		text: "Send>"
+		on_release: root.btn()
+	
+	TextInput:
+		id: main_input
+		size_hint: 0.8, 0.1
+		pos_hint:{"x": 0, "y": 0.0}
+		background_color: (0.7,0.4,0.732,1)
+		text: ""
+		multiline:False
+		
+
+<Power>:
+	power_number: power_number
+	exponent: exponent
+	Label:
+		text: "Enter the number"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+
+	TextInput:
+		id: power_number
+		text: ""
+		size_hint: 0.6, 0.1
+		pos_hint: {"x":0.2, "y":0.7}
+
+	Label:
+		text: "Enter the Exponent"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	TextInput:
+		id: exponent
+		text: ""
+		size_hint: 0.6, 0.1
+		pos_hint: {"x":0.2, "y":0.4}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_power()			
+
+
+<Sin>:
+	sinx: sinx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: sinx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_sinx()
+
+<Cos>:
+	cosx: cosx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: cosx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_cosx()
+
+<Tan>:
+	tanx: tanx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: tanx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_tanx()
+
+<Tanh>:
+	tanhx: tanhx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: tanhx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_tanhx()
+
+<Sinh>:
+	sinhx: sinhx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: sinhx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_sinhx()
+
+<Cosh>:
+	coshx: coshx
+	Label:
+		text: "Enter the value"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: coshx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "y":0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8, 0.2
+		pos_hint: {"x":0.1, "y":0.1}
+		on_release: root.find_coshx()
+
+<Radian>:
+	radianx: radianx
+	Label:
+		text: "Enter the number"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: radianx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x": 0.2, "y": 0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8,0.2
+		pos_hint: {"x":0.1, "y": 0.1}
+		on_release :root.find_radianx()
+
+
+<Degrees>:
+	degreesx: degreesx
+	Label:
+		text: "Enter the number"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: degreesx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x": 0.2, "y": 0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8,0.2
+		pos_hint: {"x":0.1, "y": 0.1}
+		on_release :root.find_degreesx()
+
+<Acos>:
+	acosx: acosx
+	Label:
+		text: "Enter the number"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: acosx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x": 0.2, "y": 0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8,0.2
+		pos_hint: {"x":0.1, "y": 0.1}
+		on_release :root.find_acosx()
+
+
+<Acosh>:
+	acoshx: acoshx
+	Label:
+		text: "Enter the number"
+		size_hint: 0.6, 0.2
+		pos_hint: {"x":0.2, "top":1}
+
+	TextInput:
+		id: acoshx
+		text: ""
+		size_hint: 0.6, 0.2
+		pos_hint: {"x": 0.2, "y": 0.5}
+
+	Button:
+		text: "Find"
+		size_hint: 0.8,0.2
+		pos_hint: {"x":0.1, "y": 0.1}
+		on_release :root.find_acoshx()
